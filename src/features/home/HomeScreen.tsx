@@ -2,17 +2,21 @@ import { View } from 'react-native';
 
 import { Card, EmptyState, Screen, Text } from '@/components/ui';
 import { timeOfDayLabel } from '@/lib/time';
+import { useSessionStore } from '@/stores/sessionStore';
 import { useTheme } from '@/theme';
 
 export function HomeScreen() {
   const t = useTheme();
+  const name = useSessionStore((s) => s.profile?.name ?? '');
+  const firstName = name.split(' ')[0];
+
   return (
     <Screen scroll>
       <View style={{ gap: t.spacing[1], marginBottom: t.spacing[6] }}>
         <Text variant="caption" muted>
-          {timeOfDayLabel()}
+          {`Good ${timeOfDayLabel().toLowerCase()}`}
         </Text>
-        <Text variant="display">Ascend</Text>
+        <Text variant="display">{firstName || 'Ascend'}</Text>
       </View>
       <Card>
         <EmptyState

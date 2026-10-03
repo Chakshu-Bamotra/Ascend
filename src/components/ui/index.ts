@@ -7,6 +7,7 @@ export { EmptyState } from './EmptyState';
 export { Input } from './Input';
 export { ListItem } from './ListItem';
 export { Screen } from './Screen';
+export { SegmentedControl } from './SegmentedControl';
 export { Sheet } from './Sheet';
 export { Spinner } from './Spinner';
 export { Text, type TextVariant } from './Text';
