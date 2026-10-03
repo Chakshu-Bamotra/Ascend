@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Ascend",
+    "slug": "ascend",
+    "scheme": "ascend",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "com.ascend.fitness",
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "com.ascend.fitness",
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png",
+        "backgroundColor": "#F3F5F8"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "resizeMode": "contain",
+          "backgroundColor": "#F3F5F8",
+          "dark": { "backgroundColor": "#101318" }
+        }
+      ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      ["expo-build-properties", { "ios": { "useFrameworks": "static" } }]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
